@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-sclae=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="jsExams.css">
+
+    <script>
+        // function findPrimes() {
+        //     var num = document.getElementById('prime').valueAsNumber;
+        //     if(num%2===0){
+        //         document.getElementById('result').innerText = num + ' is not a Prime Number';
+        //     }
+        //     else{
+        //         document.getElementById('result').innerText = num + ' is a Prime Number';
+        //     }
+        // }
+
+        // function calculate() {
+        //     var number = document.getElementById('num').valueAsNumber;
+        //     var number1 = document.getElementById('num1').valueAsNumber;
+
+        //     var total = 0;
+        //     for (i = number; i <= number1; i++) {
+        //         total += i;
+        //     }
+        //     document.getElementById("result1").innerHTML = total;
+        // }
+
+        function sumOfDigit() {
+            var number = document.getElementById('num3').value;
+            var arr = number.split('');
+            let sum = 0;
+
+            // Traversing through the string
+            for (let i = 0; i < number.length; i++) {
+
+                sum +=parseInt(arr[i]);
+            }
+            // return sum;
+            document.getElementById('result2').innerHTML = sum;
+
+
+        console.log(sum);
+        }
+
+
+        // function evenCheck(){
+        //     var number = document.getElementById('evenNumber').value;
+        //     if(number%2==0){
+        //         document.getElementById('result3').innerText = number + " is a even number.";
+        //     }
+        //     else{
+        //         document.getElementById('result3').innerText = number + " is a odd number"
+        //     }
+        // }
+
+
+        // function reverse() {
+
+        //     var rev = document.getElementById("rev").value;
+        //     var reversetext = rev.split("").reverse().join("");
+        //     document.getElementById("result5").innerText = reversetext;
+        // }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="top ">
+            <h1 class="myapp">My Apps</h1>
+        </div>
+        <div class="Child-container">
+            <div class="child">
+                <h1>Prime Check</h1>
+                <label for="">Numbers:</label>
+                <input type="number" id="prime"><br><br>
+                <button onclick="findPrimes()">Check</button>
+                <h5 id="result">Result:</h5>
+            </div>
+            <div class="child">
+                <h1>Sum Of Numbers</h1>
+                <label for="num">From:</label>
+                <input type="number" id="num"><br><br>
+                <label for="num1">To:</label>
+                <input type="number" id="num1"><br><br>
+                <button onclick="calculate()">Calculate</button>
+                <h5>result: <span id="result1"></span></h5>
+            </div>
+            <div class="child">
+                <h1>Digit Sum</h1>
+                <label for="number">Numbers:</label>
+                <input type="number" id="num3"><br><br>
+                <button onclick="sumOfDigit()">Calculate</button>
+                <h5>result:<span id="result2"></span></h5>
+            </div>
+        </div>
+        <div class="Child-container1">
+            <div class="child">
+                <h1>Even Check</h1>
+                <label for="">Numbers:</label>
+                <input type="text" id="evenNumber"><br><br>
+                <button onclick="evenCheck()">Check</button>
+                <h5>result:<span id="result3"></span></h5>
+            </div>
+            <div class="child">
+                <h1>Reverse Str</h1>
+                <label for="">Str:</label>
+                <input type="text" id="rev"><br><br>
+                <button onclick="reverse()">Check</button>
+                <h5>result:<span id="result5"></span></h5>
+            </div>
+            <div class="child">
+                <h1>Palindrome</h1>
+                <label for="">Word:</label>
+                <input type="text"><br><br>
+                <button>Check</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

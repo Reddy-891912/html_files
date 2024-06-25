@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <h1 style="text-align: center;">10th Marks Sheet</h1>
+    <script>
+        function Calculator() {
+            var Telugu = Number(document.getElementById('tel').value);
+            var Hindi = Number(document.getElementById('hin').value);
+            var English = Number(document.getElementById('eng').value);
+            var Maths = Number(document.getElementById('mat').value);
+            var Science = Number(document.getElementById('sci').value);
+            var Social = Number(document.getElementById('soc').value);
+
+            var Marks = Telugu + Hindi + English + Maths + Science + Social;
+
+            document.getElementById('result').innerText = Marks;
+
+            //Grade Calculation
+
+            if (Marks >= 400 && Marks <= 600) {
+                document.getElementById("grade").innerText = "First Class"
+            }
+            else if (Marks >= 200 && Marks <= 400) {
+                document.getElementById("grade").innerText = "Second Class"
+            }
+            else if (Marks >= 100 && Marks <= 200) {
+                document.getElementById("grade").innerText = "Third Class"
+            }
+            else if (Marks >= 0 && Marks <= 100) {
+                document.getElementById("grade").innerText = "Fourth Class"
+            }
+            else {
+                document.getElementById("grade").innerText = "Invalid Class"
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <label for="">Telugu:</label>
+        <input type="text" name="" id="tel">
+        <br><br>
+        <label for="">Hindi:</label>
+        <input type="text" name="" id="hin">
+        <br><br>
+        <label for="">English:</label>
+        <input type="text" name="" id="eng">
+        <br><br>
+        <label for="">Maths:</label>
+        <input type="text" name="" id="mat">
+        <br><br>
+        <label for="">Science:</label>
+        <input type="text" name="" id="sci">
+        <br><br>
+        <label for="">Social:</label>
+        <input type="text" name="" id="soc">
+        <br><br>
+        <button onclick="Calculator()">Calculator</button>
+        <br><br>
+        <label id="result">Total Marks:</label>
+        <h3 id="grade">Grade:</h3>
+    </center>
+</body>
+
+</html>

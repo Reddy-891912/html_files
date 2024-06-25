@@ -1,0 +1,123 @@
+<!-- 1) Four JavaScript Exams
+
+2) Try to solve the below frequent JS Interview coding questions
+
+    var arr = [5,2,6,7,4,2,6,7,8,9];
+    1) Biggest number in an array
+    2) Second biggest number in an array
+
+    var arr = [6,3,-7,2,-34,12,-44,12,33];
+    3) Calculate sum of only positive numbers in an array.
+
+    var arr = ['a','p','p','l','e'];
+    4) Calculate count of each charecter in an array.
+        => Output:  {'a':1, 'p':2, 'l':1, 'e':1};
+
+    5) Sort an array without using sort method.
+        var arr = [5,3,6,8,9,6,1,2,0,3,4];
+
+3) Calculator APP -->
+
+<html>
+
+<head>
+
+    <script>
+
+
+        // 1)Biggest number in an array
+
+        // var arr = [5,2,6,7,4,2,6,7,8,9];
+        // var largest = arr[0];
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] > largest) {
+        //         largest = arr[i];
+        //     }
+        // }
+        // console.log(largest);
+
+        // 2)Second biggest number in an array
+
+        // var arr = [5, 2, 6, 7, 4, 2, 6, 7, 8, 9];
+
+        // function secondLargest(arr) {
+        //     for (let i = arr.length - 2; i >= 0; i--) {
+        //         if (arr[i] !== arr[arr.length - 1]) {
+        //             return "The second largest element is " + arr[i];
+        //         }
+        //     }
+
+        // }
+
+        // console.log(secondLargest(arr));
+
+
+        // 3) Calculate sum of only positive numbers in an array.
+
+        // function arr(numbers) {
+        //     var sum = 0;
+
+        //     for (var i = 0; i < numbers.length; i++) {
+        //         if (numbers[i] < 0) {
+        //         } else {
+        //             sum += numbers[i];
+        //         }
+        //     }
+        //     return sum;
+        // }
+
+        // var sum_result = arr([6, 3, -7, 2, -34, 12, -44, 12, 33]);
+
+        // console.log(sum_result);
+
+
+        // 4) Calculate count of each charecter in an array.
+        //     var arr = ['a','p','p','l','e'];
+        //     => Output:  {'a':1, 'p':2, 'l':1, 'e':1};
+
+        // var arr = ['a', 'p', 'p', 'l', 'e'];
+        // count = {};
+
+        // for (element of arr) {
+        //     if (count[element]) {
+        //         count[element] += 1;
+        //     } else {
+        //         count[element] = 1;
+        //     }
+        // }
+
+        // console.log(count);
+
+        // 5) Sort an array without using sort method.
+        var arr = [5, 3, 6, 8, 9, 6, 1, 2, 0, 3, 4];
+        function bubbleSort(array) {
+            var done = false;
+            while (!done) {
+                done = true;
+                for (var i = 1; i < array.length; i += 1) {
+                    if (array[i - 1] > array[i]) {
+                        done = false;
+                        var tmp = array[i - 1];
+                        array[i - 1] = array[i];
+                        array[i] = tmp;
+                    }
+                }
+            }
+            return array;
+        }
+
+        var numbers = [5, 3, 6, 8, 9, 6, 1, 2, 0, 3, 4];
+        bubbleSort(numbers);
+        console.log(numbers);
+
+
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

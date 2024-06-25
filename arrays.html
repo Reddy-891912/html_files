@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <script>
+
+        var a = 20;
+        // console.log(a);
+
+        var ages = [10, 20, 30, 40];
+        // console.log(ages);
+
+        //select
+        // console.log(ages);
+        // console.log(ages[1]);
+
+        //update
+        ages[1] = 22;
+        // console.log(ages);
+
+        //insert
+        ages[4] = 50;
+        // console.log(ages);
+
+        //delete
+        delete ages[2];
+        var Phones = [1, 2, 3, 4, 5, 6]
+
+        //last
+        // Phones.pop();
+        // Phones.push(7);
+
+        //first
+        // Phones.shift();
+        // Phones.unshift(0);
+
+        //Any Place
+        // Phones.splice(3,2);
+        // Phones.splice(3,0,35);
+        // Phones.splice(3,0,44,45);
+        // Phones.splice(4,45,50);
+        // Phones.splice(3,2,33,45);
+
+        // console.log(Phones.includes(2)); //checking or read view
+        // console.log(Phones.includes(12));
+        // console.log(Phones.indexOf(5)); // read view for particular number
+        // console.log(Phones.indexOf(13)); // if value is not there given as a minus value
+
+        // console.log(Phones.reverse());
+        // console.log(Phones.slice(1,4));
+
+
+        //HIEGHER ORDER FUNCTIONS
+        var prices = [1000, 2000, 3000, 4000, 5000];
+
+        //MAP - To alter every element of array
+
+        //give flat 50% discount
+
+        // prices = prices.map(price=>price/2);
+
+        // console.log(prices);
+
+        //add 30rs delivery charges
+        // prices = prices.map(price=>price+30);
+
+        //Filter - To select some elements based on condition
+        // prices = prices.filter(price=>price<3500);
+
+        //Sort - Ascending (a-b) and descending (b-a) order
+        // prices = prices.sort((a,b)=>b-a);
+
+        //Reduce - AGGREGATE
+        // var total = prices.reduce((sum,price)=>sum+price);
+        // console.log(total);
+
+        // console.log(prices);
+
+        var salaries = [100000, 1200000, 11000000, 1400000, 1300000];
+
+        //apply 30% hike for every employee
+
+        // salaries = salaries.map(salary=>salary*1.3);
+
+        // add 5% cuttings on every salary
+
+        // salaries = salaries.map(salary=>salary*0.95);
+
+        //select only salaries below 14 lacks
+
+        // salaries = salaries.filter(salary=>salary<1600000);
+
+        //arrange salaries in descending order
+
+        // salaries = salaries.sort((a,b)=>b-a);
+
+        //calculate the total salary expenditure for a company
+
+        // var total = salaries.reduce((sum,salary)=>sum+salary);
+        // console.log(total);
+
+        //print the salaries array
+
+        // console.log(salaries);
+
+        var products = [
+            { name: 'mobile', category: 'gadgets', price: 10000, rating: 5 },
+            { name: 'laptop', category: 'gadgets', price: 50000, rating: 4.5 },
+            { name: 'tv', category: 'gadgets', price: 70000, rating: 4 },
+            { name: 'shirt', category: 'fashion', price: 3000, rating: 3 },
+            { name: 'pant', category: 'fashion', price: 4000, rating: 5 },
+            { name: 'saree', category: 'fashion', price: 5000, rating: 4 },
+            { name: 'flipflop', category: 'footware', price: 1000, rating: 3.5 },
+            { name: 'shoes', category: 'footware', price: 3000, rating: 4.2 },
+            { name: 'belt', category: 'accessories', price: 600, rating: 2.5 },
+            { name: 'specs', category: 'accessories', price: 999, rating: 3.8 },
+            { name: 'watch', category: 'accessories', price: 4000, rating: 5 }
+        ];
+
+        // 4+ rating products 
+        // products = products.filter(product=>product.rating>=4);
+        // console.log(products);
+
+        // all the accessories whose price is below 1000 and rating above 3
+        // products = products.filter(product=> product.category=='accessories' && product.price<1000 && product.rating>3)
+        // console.log(products);
+
+        //User need only footware and fashion
+        // products = products.filter(product=> product.category=='footware' || product.category=='fashion');
+        // console.log(products);
+
+        // display products: price low to high
+        // product = products.sort((a,b)=>a.price - b.price)
+        // console.log(products);
+
+        // display products: rating high to low
+        // products = products.sort((a,b)=>b.rating - a.rating);
+        // console.log(products);
+
+        // total product cost
+        // var total = products.reduce((sum,product)=>sum+product.price,0);
+        // console.log(total);
+
+        // apply 30rs delivery charges for each item
+        // products = products.map((product)=>{
+        //     product.price = product.price+30;
+        //     return product;
+        // })
+        // console.log(products);
+
+        // sort by product name
+
+        // products = products.sort((a, b) => a.name.localeCompare(b.name));
+        // console.log(products);
+
+        var employees = [
+            { name: 'sandeep', experience: 4, package: 1200000, role: 'UIDeveloper' },
+            { name: 'amar', experience: 5, package: 1300000, role: 'UIDeveloper' },
+            { name: 'raj', experience: 10, package: 1600000, role: 'UIDeveloper' },
+            { name: 'sunil', experience: 7, package: 1200000, role: 'UIDeveloper' },
+            { name: 'latha', experience: 2, package: 600000, role: 'Software Developer' },
+            { name: 'rama', experience: 6, package: 1400000, role: 'Software Developer' },
+            { name: 'smitha', experience: 8, package: 1600000, role: 'Data engineer' },
+            { name: 'john', experience: 3, package: 700000, role: 'Data engineer' },
+            { name: 'david', experience: 2, package: 400000, role: 'Data engineer' },
+            { name: 'smith', experience: 1, package: 300000, role: 'Testing Engineer' },
+            { name: 'sujith', experience: 3.5, package: 350000, role: 'Testing Engineer' },
+        ]
+
+        // Apply Rs.30000 festival bonus on each package 
+        // employees = employees.map(employe=>employe.package+30000); 
+        // console.log(employees);
+
+        // Select uidevelopers with whoes salary experience is above 4 and salary below 15
+        // Ans=> amar, sunil
+        employees = employees.filter(employe=>employe.role=='UIDeveloper' && employe.experience>4 && employe.package<1500000);
+        console.log(employees);
+
+        // Select employees whose salary is above 6LPA and experience is below 4 years
+        // ANS=> johhn
+        // employees = employees.filter(employe=>employe.package>600000 && employe.experience<4);
+        // console.log(employees);
+
+        // Arrange all the employees in ascending order based on the name
+        // employees = employees.sort((a,b)=>a.name.localeCompare (b.name));
+        // console.log(employees);
+
+        // Arrange all the employees in descending order based on experience
+        // employees = employees.sort((a,b)=>b.experience - a.experience)
+        // console.log(employees);
+        
+        // Calculate total salary expenditure for a company
+        // var total = employees.reduce((sum,employe)=>sum+employe.package,0);
+        // console.log(total);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

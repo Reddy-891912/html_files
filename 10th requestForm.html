@@ -1,0 +1,255 @@
+<!-- <html>
+    <head>
+        <style>
+            
+        </style>
+        <script>
+            function CALCULATOR(){
+                var Telugu = Number(document.getElementById("tel").value);
+                var Hindi = Number(document.getElementById("hin").value);
+                var English = Number(document.getElementById("eng").value);
+                var Maths = Number(document.getElementById("mat").value);
+                var Science = Number(document.getElementById("sci").value);
+                var Social = Number(document.getElementById("soc").value);
+
+                var Marks = Telugu + Hindi + English + Maths + Science + Social;
+
+                document.getElementById('result').innerText = Marks;
+
+                // Grade Calculation
+        //     if(Marks>=400 && Marks<=600){
+        //         document.getElementById("grade").innerText = "First Class";
+        //     }
+        //     else if(Marks>=200 && Marks<=400){
+        //         document.getElementById("grade").innerText = "Second Class";
+        //     }
+        //    else if(Marks>=100 && Marks<=200){
+        //         document.getElementById("grade").innerText = "Third Class";
+        //     }
+        //    else if(Marks>=0 && Marks<=100){
+        //         document.getElementById("grade").innerText = "Fourth Class";
+        //     }
+        //    else{
+        //         document.getElementById("grade").innerText = "Invalid Marks";
+        //     }
+            }
+        </script>
+    </head>
+
+    <body>
+        <center>
+            <h1>10th result</h1>
+            <label>Telugu:</label>
+            <input type="text" id="tel">
+            <br><br>
+            <label>Hindi:</label>
+            <input type="text" id="hin">
+            <br><br>
+            <label>English:</label>
+            <input type="text" id="eng">
+            <br><br>
+            <label>Maths:</label>
+            <input type="text" id="mat">
+            <br><br>
+            <label>Social:</label>
+            <input type="text" id="sci">
+            <br><br>
+            <label>Science:</label>
+            <input type="text" id="soc">
+            <br><br>
+            <button onclick="CALCULATOR()">CALCULATOR</button>
+            <BR></BR>
+            <h3 id="result">Total Marks:</h3>
+            <h3 id="grade">Grade:</h3>
+        </center>
+    </body>
+</html> -->
+
+<!-- <html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="text-center">Student Marksheet Insert</h1><br />
+        <div id="success" class="alert alert-success close" style="display:none;">
+
+        </div>
+
+        <fieldset>
+            <div class="row py-5">
+                <div class="col">
+                    <input type="text" id="name" class="form-control" placeholder="Student Name">
+                </div>
+                <div class="col">
+                    <input type="text" id="stdclass" class="form-control" placeholder="Class">
+                </div>
+            </div>
+        </fieldset>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="6" class="text-center">Insert Student Marks</th>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <th>Tamil</th>
+                    <th>Hindi</th>
+                    <th>Computer</th>
+                    <th>History</th>
+                    <th>Science</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td><input type="number" id="english" class="form-control"></td>
+                    <td><input type="number" id="tamil" class="form-control"></td>
+                    <td><input type="number" id="hindi" class="form-control"></td>
+                    <td><input type="number" id="computer" class="form-control"></td>
+                    <td><input type="number" id="history" class="form-control"></td>
+                    <td><input type="number" id="science" class="form-control"></td>
+
+
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="d-grid col-6 mx-auto gap-2">
+                            <input type="submit" id="save" class="btn btn-primary" name="save" value="Insert Data">
+                            <input type="reset" id="reset" class="btn btn-danger" name="reset" value="Reset" />
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="py-5"></div>
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td id="txtname"></td>
+            </tr>
+            <tr>
+                <td><strong>Class:</strong></td>
+                <td id="txtclass"></td>
+            </tr>
+        </table>
+        <div class="text-success py-3">
+            <hr>
+        </div>
+        <table class="table table-bordered">
+            <th>Subject</th>
+            <th>Marks</th>
+            <tr>
+                <td>English</td>
+                <td id="txtEnglish"></td>
+            </tr>
+            <tr>
+                <td>Tamil</td>
+                <td id="txttamil"></td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td id="txthindi"></td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td id="txtcomputer"></td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td id="txthistory"></td>ī
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td id="txtscience"></td>
+            </tr>
+            <tr>
+                <td class="text-center"><b>Total</b></td>
+                <td id="txttotal"></td>
+            </tr>
+            <tr>
+                <td class="text-center"><b>Results</b></td>
+                <td id="txtresult"></td>
+            </tr>
+        </table>
+
+
+    </div>
+    JavaScript Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#save').on('click', function () {
+                var name = $('#name').val();
+                var stdclass = $('#stdclass').val();
+                var english = $('#english').val();
+                var tamil = $('#tamil').val();
+                var hindi = $('#hindi').val();
+                var computer = $('#computer').val();
+                var history = $('#history').val();
+                var science = $('#science').val();
+                var presult = 'Pass';
+                var fresult = 'Fail';
+
+                var totalMarks = parseInt(english) + parseInt(tamil) + parseInt(hindi) + parseInt(computer) + parseInt(history) + parseInt(science);
+
+                var averageMarks = totalMarks / 6;
+
+
+                if (name != '' && stdclass != '' && english != '' && tamil != '' && hindi != '' && computer != '' && history != '' && science != '') {
+                    $('#txtname').html(name);
+                    $('#txtclass').html(stdclass);
+                    $('#txtEnglish').html(english);
+                    $('#txttamil').html(tamil);
+                    $('#txthindi').html(hindi);
+                    $('#txtcomputer').html(computer);
+                    $('#txthistory').html(history);
+                    $('#txtscience').html(science);
+                    $('#txttotal').html(totalMarks);
+
+
+                }
+                else {
+                    alert('Please All the fields');
+                }
+
+                if (english >= 35 && tamil >= 35 && hindi >= 35 && computer >= 35 && history >= 35 && science >= 35) {
+                    $('#txtresult').html(presult);
+
+                }
+                else if(english<=100 && tamil<=100 && hindi<=100 && computer<=100 && history<=100 && science<=100)
+                {
+                   $('#txtresult').html(presult);
+
+                }
+                else {
+                    $('#txtresult').html(fresult);
+                }
+
+
+            });
+            $('#reset').click(function () {
+                $(':input')
+                    .not(':button, :submit, :reset, :hidden')
+                    .val('')
+                    .removeAttr('checked')
+                    .removeAttr('selected');
+            });
+
+            // display the result
+
+
+        });
+    </script>
+</body>
+
+</html>  -->

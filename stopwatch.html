@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <script>
+
+        var interval;
+        var i = 0;
+
+        function start() {
+            interval = setInterval(function () {
+                document.getElementById("time").innerText = "" + i++;
+            }, 1000)
+        };
+
+        function stop() {
+            clearInterval(interval);
+        };
+
+        function reset() {
+            // interval = setInterval(function () {
+            //     document.getElementById("time").innerText = "";
+            // })
+            clearInterval(interval,i=0);
+        };
+
+        function restart() {
+            start();
+        };
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>STOP WATCH</h1>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="reset()">reset</button>
+        <button onclick="restart()">restart</button>
+
+        <h3 id="time" for="name" name="time">Time:</h3>
+    </center>
+</body>
+
+</html>

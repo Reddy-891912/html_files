@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+          var a = 20;
+          console.log("in global", a);
+
+          function wish(){
+            console.log("in function", a);
+            var a = 30;
+            console.log("in function", a);
+          }
+          wish();
+
+          if(true){
+            console.log("in block",a);
+            var a = 40;
+            console.log("in block", a);
+          }
+          console.log("in global",a);
+
+
+
+        console.log(a);
+        var a = 1;
+        let b = 2;
+        console.log(a,b);
+        function wish(){
+            console.log(a);
+            var a = 3;
+            let b = 4;
+            console.log(a,b);
+            if(true){
+                console.log(a);
+                var a = 5;
+                let b = 6;
+                console.log(a,b);
+            }
+            console.log(a,b);
+        }
+        wish();
+        console.log(a,b);
+
+        </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>
+

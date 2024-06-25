@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script>
+        // function wish(){
+        //     console.log("HI");
+        // }
+        // wish();
+
+        // function wish(time){
+        //     console.log("time is" +time);
+        // }
+        // wish0(10);
+        // wish0(20);
+
+        // function sum(a,b){
+        //     console.log("sum is", a+b);
+        // }
+
+        // sum(2,3);
+        // sum(12,13);
+        // sum(20,30);
+
+        function abc(a, b) {
+            console.log(a, b, arguments);
+        }
+        abc(20, 35);
+
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(add(4, 3));
+
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(abc(4, 3));
+
+        //normal function
+        function wish() {
+            console.log("Hi");
+        }
+        wish();
+
+        //annonymus function
+        var wish2 = function () {
+            console.log("Hi");
+        }
+        wish2();
+
+        //arrow function
+        var wish3 = () => console.log("Hi");
+        wish3();
+
+        var sum = (a, b) => console.log(a + b);
+        sum(2, 3);
+
+        // arrow function with more than one statement
+        var mul = (a, b) => {
+            var result = a * b;
+            console.log(result);
+        }
+        mul(3, 4)
+
+        function print(data) {
+            console.log("result is" + data)
+        }
+
+        function addition(a, b, log) {
+            log(a + b);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

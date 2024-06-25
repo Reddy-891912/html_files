@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script>
+        // executes once after 3 seconds
+        // setTimeout(function(){
+        //     console.log("hi");
+        // },3000)
+
+        // executes for every 3 seconds
+        // setInterval(function(){
+        //     console.log("hello")
+        // },3000)
+
+        var interval;
+        var i = 0;
+        function start() {
+            interval = setInterval(function () {
+                // console.log("hello")
+                console.log(i++);
+            }, 1000)
+        }
+
+        function stop() {
+            clearInterval(interval);
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+</body>
+
+</html>
